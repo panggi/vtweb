@@ -1,14 +1,14 @@
-# Required gems
-require "rubygems"
-require "digest/sha2"
-require "addressable/uri"
-require "faraday"
-
 # Other Requirements
 require "vtweb/config"
 require "vtweb/merchant_hash_generator"
 require "vtweb/post_params"
 require "vtweb/version"
+
+# Required gems
+require "rubygems"
+require "digest/sha2"
+require "addressable/uri"
+require "faraday"
 
 module Vtweb
   class Client
