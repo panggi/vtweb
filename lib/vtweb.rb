@@ -65,11 +65,25 @@ module Vtweb
         # Items
         item = @item.collect do |data|
           data.keys.map do |key|
+            if key.downcase == "item_id"
               data["item_id[]"] = data[key]            
+            end
+          
+            if key.downcase == "price"
               data["price[]"] = data[key]
+            end
+
+            if key.downcase == "quantity"
               data["quantity[]"] = data[key]
+            end
+
+            if key.downcase == "item_name1"
               data["item_name1[]"] = data[key]
+            end
+
+            if key.downcase == "item_name2"
               data["item_name2[]"] = data[key]
+            end
 
             data.delete key
           end        
