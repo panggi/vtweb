@@ -1,3 +1,5 @@
+$:.unshift File.dirname(__FILE__)
+
 # Required gems
 require "rubygems"
 require "digest/sha2"
