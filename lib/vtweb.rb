@@ -1,6 +1,7 @@
 # Required gems
 require "rubygems"
 require "digest/sha2"
+require "addressable"
 require "addressable/uri"
 require "faraday"
 
