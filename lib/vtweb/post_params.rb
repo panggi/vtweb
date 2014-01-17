@@ -66,7 +66,7 @@ module Vtweb
       :new_api
     ]
 
-    AllParam = (Merchant + Payment + Personal + Shipping + Language + Purchases + OtherParams) - ServerParams
+    AllParam = (Merchant + Payment + Personal + Shipping + Purchases + OtherParams) - ServerParams
   end
 
 end
