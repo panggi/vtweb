@@ -1,4 +1,4 @@
-# Vtweb
+# Veritrans VT-Web Ruby Wrapper
 
 Ruby Wrapper for Veritrans VT-Web. Visit https://www.veritrans.co.id for more information.
 
