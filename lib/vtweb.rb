@@ -1,7 +1,9 @@
+$:.unshift File.dirname(__FILE__)
+
 # Required gems
 require "rubygems"
 require "digest/sha2"
-#require "addressable/uri"
+require "addressable/uri"
 require "faraday"
 
 # Other Requirements
