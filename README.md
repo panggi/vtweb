@@ -60,8 +60,8 @@ In your controller, create a method to use the gem. I took the code from https:/
       end
   
       client.item    							= params["item"]
-      client.billing_different_with_shipping 	                        = 1
-      client.required_shipping_address 				        = 1
+      client.billing_different_with_shipping 	= 1
+      client.required_shipping_address 			= 1
       client.first_name    						= params[:shipping_first_name]
       client.last_name     						= params[:shipping_last_name]
       client.address1      						= params[:shipping_address1]
