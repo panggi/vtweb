@@ -14,7 +14,7 @@ require "vtweb/version"
 
 module Vtweb
   class Client
-      include RbConfig
+      include Config
 
       def initialize(&block)
         class <<self
