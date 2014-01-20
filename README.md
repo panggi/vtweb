@@ -95,7 +95,7 @@ In your controller, create a method to use the gem. I took the code from https:/
       render :layout => 'application'
     end
     
-After you get TOKEN_BROWSER and TOKEN_MERCHANT, post merchant_id, order_id and TOKEN_BROWSER to redirection url of vtweb. This code is also taken from https://github.com/veritrans/veritrans-rails-sample-cart :
+After you get TOKEN_BROWSER and TOKEN_MERCHANT, you have to send a http post request merchant_id, order_id and TOKEN_BROWSER to redirection url of vtweb. This code was also taken from https://github.com/veritrans/veritrans-rails-sample-cart :
 
     <h1 align="center">Confirm Purchase Items</h1>
  
@@ -104,7 +104,7 @@ After you get TOKEN_BROWSER and TOKEN_MERCHANT, post merchant_id, order_id and T
     	<input type="hidden" name="order_id" value="<%= @client.order_id %>">
     	<input type="hidden" name="token_browser" value="<%= @client.token["TOKEN_BROWSER"] %>">
     	<table border="1" align="center" width="80%" cellpadding="10" bgcolor="#FFFFCC">
-    		<tr>
+      <tr>
         <th>Name</th>
         <th>Price</th>
         <th>Quantity</th>
