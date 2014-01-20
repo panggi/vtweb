@@ -59,40 +59,36 @@ In your controller, create a method to use the gem. I took the code from https:/
                                   "item_name1" => item.product.name, "item_name2" => item.product.name }
       end
   
-      # client.gross_amount = Cart.select(:sub_total).sum(:sub_total).to_s
-      client.item    = params["item"]
-
-      client.billing_different_with_shipping = 1
-      client.required_shipping_address = 1
+      client.item    													= params["item"]
+      client.billing_different_with_shipping 	= 1
+      client.required_shipping_address 				= 1
+      client.first_name    										= params[:shipping_first_name]
+      client.last_name     										= params[:shipping_last_name]
+      client.address1      										= params[:shipping_address1]
+      client.address2      										= params[:shipping_address2]
+      client.city          										= params[:shipping_city]
+      client.country_code  										= "IDN"
+      client.postal_code   										= params[:shipping_postal_code]
+      client.phone         										= params[:shipping_phone]    
+      client.shipping_first_name    					= params[:shipping_first_name]
+      client.shipping_last_name     					= params[:shipping_last_name]
+      client.shipping_address1      					= params[:shipping_address1]
+      client.shipping_address2      					= params[:shipping_address2]
+      client.shipping_city          					= params[:shipping_city]
+      client.shipping_country_code  					= "IDN"
+      client.shipping_postal_code   					= params[:shipping_postal_code]
+      client.shipping_phone         					= params[:shipping_phone]  
+      client.email 														= params[:email] 
   
-      client.first_name    = params[:shipping_first_name]
-      client.last_name     = params[:shipping_last_name]
-      client.address1      = params[:shipping_address1]
-      client.address2      = params[:shipping_address2]
-      client.city          = params[:shipping_city]
-      client.country_code  = "IDN"
-      client.postal_code   = params[:shipping_postal_code]
-      client.phone         = params[:shipping_phone]    
-
-      client.shipping_first_name    = params[:shipping_first_name]
-      client.shipping_last_name     = params[:shipping_last_name]
-      client.shipping_address1      = params[:shipping_address1]
-      client.shipping_address2      = params[:shipping_address2]
-      client.shipping_city          = params[:shipping_city]
-      client.shipping_country_code  = "IDN"
-      client.shipping_postal_code   = params[:shipping_postal_code]
-      client.shipping_phone         = params[:shipping_phone]
-  
-      client.email = params[:email] 
-  
-      client.promo_bins             = ["4"]    
-      client.payment_type           = '01'
-      client.enable_3d_secure       = 1
-      client.installment_banks      = ["bni","cimb","mandiri"]
-      client.installment_terms      = { bni: ['3','12','2'], cimb: ['3', '6', '12'] }
-      client.point_banks            = ["cimb","bni", "miun"]
-      client.bank                   = 'bni'
-      client.payment_methods        = ["credit_card","mandiri_clickpay"]
+			# Payment Options
+      client.promo_bins             					= ["4"]    
+      client.payment_type           					= '01' #deprecated
+      client.enable_3d_secure      						= 1
+      client.installment_banks      					= ["bni","cimb","mandiri"]
+      client.installment_terms      					= { bni: ['3','12','2'], cimb: ['3', '6', '12'] }
+      client.point_banks            					= ["cimb","bni", "miun"]
+      client.bank                   					= 'bni'
+      client.payment_methods        					= ["credit_card","mandiri_clickpay"]
 
       client.get_keys
       @client = client
