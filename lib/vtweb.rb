@@ -115,7 +115,7 @@ module Vtweb
       end
 
       def redirection_url
-        "#{vtweb_server}#{redirection_url}"
+        "#{vtweb_server}#{Config::REDIRECTION_URL}"
       end
 
       def merchant_id
