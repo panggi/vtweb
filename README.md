@@ -36,6 +36,7 @@ In your Rails app, create 'vtweb.yml' at config directory (config/vtweb.yml) wit
       error_payment_return_url: "http://yourweb.com/shop_again"
       
 Create a file in 'config/initializers' to set config to vtweb.yml, for example 'store_config.rb':
+    
     raw_config = File.read("#{Rails.root}/config/vtweb.yml")
     CONFIG = YAML.load(raw_config)[Rails.env].symbolize_keys
  
