@@ -110,7 +110,7 @@ module Vtweb
         @token = parse_body(@resp[:body])
       end
 
-      def server_host
+      def vtweb_server
         return Client.config["vtweb_server"] ? Client.config["vtweb_server"] : Config::VTWEB_SERVER
       end
 
