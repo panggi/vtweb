@@ -81,14 +81,14 @@ In your controller, create a method to use the gem. I took the code from https:/
       client.email 							    = params[:email] 
   
       # Payment Options
-      client.promo_bins             			= ["4"]    
+      client.promo_bins             			= ['411111', '510510']    
       client.payment_type           			= '01' #deprecated
       client.enable_3d_secure      				= 1
-      client.installment_banks      			= ["bni","cimb","mandiri"]
+      client.installment_banks      			= ['bni', 'cimb', 'mandiri']
       client.installment_terms      			= { bni: ['3','12','2'], cimb: ['3', '6', '12'] }
-      client.point_banks            			= ["cimb","bni", "miun"]
+      client.point_banks            			= ['cimb', 'bni']
       client.bank                   			= 'bni'
-      client.payment_methods        			= ["credit_card","mandiri_clickpay"]
+      client.payment_methods        			= ['credit_card', 'mandiri_clickpay']
 
       client.get_keys
       @client = client
