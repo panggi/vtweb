@@ -20,7 +20,8 @@ module Vtweb
           'merchant_hash_key' => nil,
           'finish_payment_return_url' => nil,
           'unfinish_payment_return_url' => nil,
-          'error_payment_return_url' => nil
+          'error_payment_return_url' => nil,
+          'vtweb_server' => nil
         }
         
         @@config_env = ::Object.const_defined?(:Rails) ? Rails.env : "development"
