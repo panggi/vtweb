@@ -1,4 +1,4 @@
-# Veritrans VT-Web Ruby Wrapper
+# Veritrans VT-Web Ruby wrapper
 
 Ruby Wrapper for Veritrans VT-Web. Visit https://www.veritrans.co.id for more information about the product and see documentation at http://veritrans.github.io/vtweb/index.html for more technical details.
 
@@ -31,7 +31,7 @@ In your Rails app, create 'vtweb.yml' at config directory (config/vtweb.yml) wit
     production:
       merchant_id: "A100000000000001XXXXXX"
       merchant_hash_key: "yourmerchanthashkey"
-      unfinish_payment_return_url: "http://yourweb.com/"
+      unfinish_payment_return_url: "http://yourweb.com/canceled"
       finish_payment_return_url: "http://yourweb.com/thank_you"
       error_payment_return_url: "http://yourweb.com/shop_again"
       
@@ -113,7 +113,7 @@ After you get TOKEN_BROWSER and TOKEN_MERCHANT, you have to send a http post req
       
       <% for cart in @carts %>
         <tr>
-        	<td><%= cart.product.name %></td>
+          <td><%= cart.product.name %></td>
           <td><%= cart.product.price %></td>
           <td><%= cart.quantity %></td>
           <td><%= cart.sub_total %></td>
