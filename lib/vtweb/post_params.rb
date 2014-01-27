@@ -12,6 +12,7 @@ module Vtweb
 
     Payment =[
       :payment_type, 
+      :gross_amount,
       :installment_type,
       :installment_banks,
       :installment_terms,
