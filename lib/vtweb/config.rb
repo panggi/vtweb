@@ -11,7 +11,6 @@ module Vtweb
 
     # Params Config
     BILLING_DIFFERENT_WITH_SHIPPING = '0'
-    PAYMENT_TYPE = "01"
 
     def Config.included(mod)
       class <<self

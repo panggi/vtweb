@@ -10,9 +10,7 @@ module Vtweb
       :error_payment_return_url
     ]
 
-    Payment =[
-      :payment_type, 
-      :gross_amount,
+    Payment =[ 
       :installment_type,
       :installment_banks,
       :installment_terms,
@@ -55,7 +53,7 @@ module Vtweb
 
     OtherParams =[
       :order_id, 
-      :new_api
+      :version
     ]
     
     ServerParams =[
@@ -64,7 +62,7 @@ module Vtweb
       :finish_payment_return_url,
       :unfinish_payment_return_url,
       :error_payment_return_url,
-      :new_api
+      :version
     ]
 
     AllParam = (Merchant + Payment + Personal + Shipping + Purchases + OtherParams) - ServerParams

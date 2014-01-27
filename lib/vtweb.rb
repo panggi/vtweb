@@ -24,7 +24,6 @@ module Vtweb
         end
       
         self.billing_different_with_shipping = Config::BILLING_DIFFERENT_WITH_SHIPPING 
-        self.payment_type                    = Config::PAYMENT_TYPE
       end
 
       def get_keys
@@ -166,14 +165,14 @@ module Vtweb
         @required_shipping_address = flag
       end
 
-      def new_api
-        return true
+      def version
+        return '1'
       end
 
       private
 
       def merchanthash
-        return MerchantHashGenerator::generate(merchant_id, merchant_hash_key, payment_type, order_id);
+        return MerchantHashGenerator::generate(merchant_id, merchant_hash_key, order_id);
       end
 
       def parse_body(body)
