@@ -59,6 +59,7 @@ In your controller, create a method to use the gem. I took the code from https:/
                                   "item_name1" => item.product.name, "item_name2" => item.product.name }
       end
   
+      client.gross_amount                       = Cart.select(:sub_total).sum(:sub_total).to_s
       client.item    							= params["item"]
       client.billing_different_with_shipping 	= 1
       client.required_shipping_address 			= 1
