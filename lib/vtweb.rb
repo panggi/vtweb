@@ -106,7 +106,7 @@ module Vtweb
         delete_keys
         @resp[:url] = @resp[:url].to_s
 
-        @token = parse_body(@resp[:body])
+        @token = JSON.parse(@resp[:body])
       end
 
       def vtweb_server
