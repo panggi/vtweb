@@ -29,8 +29,8 @@ module Vtweb
       def get_keys
         init_instance
       
-        if billing_different_with_shipping == "0" && required_shipping_address == "0"
-          raise "required_shipping_address must be '1'"
+        if billing_different_with_shipping.to_i == 0 && required_shipping_address.to_i == 0
+          raise "required_shipping_address must be 1"
         end
 
         params = prepare_params(PostParams::ServerParams,PostParams::AllParam)
@@ -166,7 +166,7 @@ module Vtweb
       end
 
       def version
-        return '1'
+        return 1
       end
 
       private
